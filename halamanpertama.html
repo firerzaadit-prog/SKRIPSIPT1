@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EduLearn TKA SMP Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="halamanpertama.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <h1 class="logo">EduLearn</h1>
+            <nav class="main-nav">
+                <a href="#" class="nav-link active">Dashboard</a>
+                <a href="#" class="nav-link">Materi</a>
+                <a href="#" class="nav-link">Simulasi</a>
+                <a href="#" class="nav-link">Progress</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/40x40/4F46E5/FFFFFF?text=U" alt="Profile" class="profile-avatar">
+                <span class="profile-name">Nama Siswa</span>
+                <i class="fas fa-chevron-down profile-dropdown-icon"></i>
+                <div class="profile-dropdown">
+                    <a href="#" class="logout-link">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h2>Selamat Datang di EduLearn TKA SMP! 👋</h2>
+            <p>Lanjutkan pembelajaran Anda hari ini</p>
+        </section>
+
+        <!-- Stats Cards -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>12</h3>
+                    <p>Materi Selesai</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>85%</h3>
+                    <p>Nilai Rata-rata</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>24</h3>
+                    <p>Jam Belajar</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>4.8</h3>
+                    <p>Rating</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <section class="content-grid">
+            <!-- Materi Section -->
+            <div class="content-card materi-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-book-open"></i> Materi Pembelajaran</h3>
+                    <a href="#" class="view-all">Lihat Semua</a>
+                </div>
+                <div class="card-content">
+                    <div class="materi-item">
+                        <div class="materi-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="materi-info">
+                            <h4>Matematika Dasar</h4>
+                            <p>Aljabar dan Geometri</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="materi-item">
+                        <div class="materi-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="materi-info">
+                            <h4>Bahasa Indonesia</h4>
+                            <p>Tata Bahasa & Sastra</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="materi-item">
+                        <div class="materi-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="materi-info">
+                            <h4>Bahasa Inggris</h4>
+                            <p>Grammar & Vocabulary</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simulasi Section -->
+            <div class="content-card simulasi-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-gamepad"></i> Simulasi & Latihan</h3>
+                    <a href="#" class="view-all">Lihat Semua</a>
+                </div>
+                <div class="card-content">
+                    <div class="simulasi-item">
+                        <div class="simulasi-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="simulasi-info">
+                            <h4>Tes Kemampuan Akademik</h4>
+                            <p>Simulasi UN SMP</p>
+                            <button class="btn-primary">Mulai</button>
+                        </div>
+                    </div>
+                    <div class="simulasi-item">
+                        <div class="simulasi-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="simulasi-info">
+                            <h4>Latihan Soal</h4>
+                            <p>Kumpulan soal interaktif</p>
+                            <button class="btn-secondary">Latihan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="content-card profile-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-user"></i> Profil Siswa</h3>
+                    <a href="#" class="view-all">Edit</a>
+                </div>
+                <div class="card-content">
+                    <div class="profile-info">
+                        <img src="https://via.placeholder.com/80x80/4F46E5/FFFFFF?text=U" alt="Profile" class="profile-large-avatar">
+                        <h4>Nama Lengkap Siswa</h4>
+                        <p>email@siswa.sch.id</p>
+                        <div class="profile-stats">
+                            <div class="profile-stat">
+                                <span class="stat-number">SMP 8</span>
+                                <span class="stat-label">Kelas</span>
+                            </div>
+                            <div class="profile-stat">
+                                <span class="stat-number">Jakarta</span>
+                                <span class="stat-label">Lokasi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="halamanpertama.js"></script>
+</body>
+</html>
